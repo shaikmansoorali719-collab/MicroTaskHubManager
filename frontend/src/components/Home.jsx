@@ -4,6 +4,7 @@ import { apibaseurl, callApi, imgurl } from '../lib';
 import ProgressBar from './ProgressBar';
 import Profile from './Profile';
 import UserManager from './UserManager';
+import TaskManager from './TaskManager';
 
 const Home = () => {
     const [fullname, setFullname] = useState("");
@@ -41,6 +42,7 @@ const Home = () => {
         setIsProgress(true);
         setActiveMenu(mid);
         const component = {
+            3: <TaskManager logout={logout} />,
             4: <UserManager logout={logout} />,
             5: <Profile logout={logout} />
         };

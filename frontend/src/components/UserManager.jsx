@@ -122,7 +122,6 @@ const UserManager = ({logout}) => {
             callApi("POST", apibaseurl + "/authservice/saveuser", userData, null, saveUserHandler, token);
         else
             callApi("PUT", apibaseurl + "/authservice/updateuser/" + userData?.id, userData, null, saveUserHandler, token);
-        setIsProgress(false);
     }
 
     function saveUserHandler(res){

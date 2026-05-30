@@ -10,3 +10,11 @@ class SignupSchema(BaseModel):
 class SigninSchema(BaseModel):
     username: str
     password: str
+    
+class UserSchema(BaseModel):
+    fullname: str
+    phone: str
+    email: str
+    password: str
+    role: int
+    status: int
